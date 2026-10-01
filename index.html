@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blush · Usability Tracker</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fff5f9;--panel:#fff;--ink:#3b1530;--muted:#8c5f7c;--line:#f7d3e4;--accent:#ec4899;--accent2:#f9a8d4;--soft:#fde4ef;--warn:#e11d48;--grad:linear-gradient(135deg,#f472b6,#ec4899 55%,#be185d)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f0d19;--panel:#2d1425;--ink:#fde8f2;--muted:#d2a1bd;--line:#4a2640;--accent:#f472b6;--accent2:#be185d;--soft:#3d1b32;--warn:#fb7185}}
+:root[data-theme="dark"]{--bg:#1f0d19;--panel:#2d1425;--ink:#fde8f2;--muted:#d2a1bd;--line:#4a2640;--accent:#f472b6;--accent2:#be185d;--soft:#3d1b32;--warn:#fb7185}
+*,*:before,*:after{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;padding:24px 340px 60px 24px;background:var(--bg);color:var(--ink);font:16px/1.55 "Nunito","Segoe UI",system-ui,sans-serif;background-image:radial-gradient(circle at 10% 0,rgba(244,114,182,.18),transparent 40%)}
+main{max-width:860px;margin:0 auto}
+header{padding:34px;border-radius:26px;background:var(--grad);color:#fff;margin-bottom:20px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.18)}
+h1{margin:0 0 6px;font-size:clamp(26px,4vw,38px);line-height:1.1}h2{margin-top:0}header p{margin:0;opacity:.92;max-width:520px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--soft);color:var(--ink);padding:9px 14px;border-radius:999px;transition:transform .1s,background .15s}
+button:hover{background:var(--accent2);color:#3b1530}button:active{transform:scale(.97)}button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.primary{background:var(--grad)!important;color:#fff!important;border:0;font-weight:700}.danger{color:var(--warn)}
+.block,.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}.cards .card{margin:0;border-bottom:4px solid var(--accent)}.card h3{margin:0 0 4px}.card p{margin:0 0 12px;color:var(--muted)}
+.tall{min-height:340px}.dead{color:var(--muted)}
+.target{min-height:180px;display:grid;place-items:center;text-align:center;border:2px dashed var(--accent);border-radius:18px;background:var(--soft)}
+#panel{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:308px;z-index:1000;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 14px 40px rgba(236,72,153,.22)}
+.ph{display:flex;justify-content:space-between;align-items:center;gap:8px}.ph h3{margin:0;font-size:17px}
+.pill{font-size:11px;padding:2px 9px;border-radius:99px;background:var(--accent);color:#fff;margin-left:6px;vertical-align:2px}.pill.off{background:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.stat{background:var(--soft);border-radius:14px;padding:9px 11px;min-width:0}.stat b{display:block;font-size:21px;line-height:1.2;overflow-wrap:anywhere}.stat span{font-size:11px;color:var(--muted)}.wide{grid-column:span 2}
+.bar{height:7px;background:var(--line);border-radius:9px;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;width:0;background:var(--grad);transition:width .3s}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:6px}.btns button{font-size:12px;padding:8px 6px;border-radius:12px}.full{grid-column:span 2}
+.btns button.on{background:var(--accent);color:#fff}
+#log{max-height:150px;overflow:auto;background:#2b1024;color:#ffd1e6;border-radius:12px;padding:10px;font:11px/1.45 ui-monospace,monospace;margin-top:12px}#log div{border-bottom:1px solid #4a2040;padding:2px 0;overflow-wrap:anywhere}
+textarea{width:100%;min-height:90px;margin-top:10px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:11px ui-monospace,monospace;padding:8px}
+.note{font-size:12px;color:var(--muted);margin:8px 0 0}
+#layer{position:absolute;left:0;top:0;pointer-events:none;z-index:500;overflow:visible}
+#layer>*{position:absolute;pointer-events:none}
+.dot{width:18px;height:18px;margin:-9px;border-radius:50%;background:var(--accent);border:2px solid #fff;display:grid;place-items:center;font-size:9px;font-weight:800;color:#fff;box-shadow:0 0 0 5px rgba(236,72,153,.22)}
+.dot.rage{background:#be123c;box-shadow:0 0 0 8px rgba(190,18,60,.28)}.dot.deadc{background:transparent;border:2px dashed var(--accent);color:var(--accent);box-shadow:none}
+.heat{width:80px;height:80px;margin:-40px;border-radius:50%;background:radial-gradient(circle,rgba(225,29,72,.6),rgba(244,114,182,.38) 40%,rgba(251,207,232,.15) 62%,transparent 75%)}
+.sc{width:11px;height:11px;margin:-6px;border-radius:50%;background:#db2777;border:2px solid #fff}
+.mp{width:5px;height:5px;margin:-2px;border-radius:50%;background:rgba(190,24,93,.5)}
+.hide-n .dot{font-size:0}
+dialog{border:0;border-radius:24px;padding:0;width:min(520px,94vw);max-height:85vh;overflow:auto;background:var(--panel);color:var(--ink);box-shadow:0 24px 70px rgba(190,24,93,.35)}dialog::backdrop{background:rgba(59,21,48,.55)}
+.di{padding:24px}.di h2{margin:0 0 4px}.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.verdict{border-radius:14px;padding:12px 14px;background:var(--grad);color:#fff;font-weight:700}.verdict small{display:block;font-weight:400;opacity:.92}
+.tw{max-height:200px;overflow:auto;border:1px solid var(--line);border-radius:12px;margin-top:8px}table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}th{position:sticky;top:0;background:var(--soft)}
+.da{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+@media(max-width:860px){body{padding:16px 14px 330px}#panel{top:auto;left:10px;right:10px;width:auto;height:300px;bottom:calc(10px + env(safe-area-inset-bottom,0px))}#panel.min{height:62px;overflow:hidden}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<aside id="panel" aria-label="Usability tracker">
+ <div class="ph"><h3>Blush Tracker<span id="status" class="pill">Live</span></h3><button id="bMin" aria-label="Collapse">−</button></div>
+ <div class="grid">
+  <div class="stat"><b id="sEv">0</b><span>Events</span></div><div class="stat"><b id="sCl">0</b><span>Clicks</span></div>
+  <div class="stat"><b id="sRage">0</b><span>Rage clicks</span></div><div class="stat"><b id="sDead">0</b><span>Dead clicks</span></div>
+  <div class="stat"><b id="sTtc">—</b><span>Time to 1st click</span></div><div class="stat"><b id="sTime">0s</b><span>Time on page</span></div>
+  <div class="stat wide"><b id="sFr">100</b><span>Friction-free score</span><div class="bar"><i id="fBar" style="width:100%"></i></div></div>
+  <div class="stat wide"><b id="sDepth">0%</b><span>Max scroll depth</span><div class="bar"><i id="dBar"></i></div></div>
+ </div>
+ <div class="btns">
+  <button class="full primary" id="bSum">View summary</button>
+  <button class="full" id="bToggle">Pause tracking</button>
+  <button data-v="dots" class="on">Click dots</button><button data-v="heat">Heatmap</button>
+  <button data-v="scatter">Scatter</button><button data-v="mouse">Mouse points</button>
+  <button id="bPath">Mouse path</button><button data-v="none">Clear visuals</button>
+  <button id="bUndo">Undo click</button><button id="bNum">Numbers: on</button>
+  <button class="full primary" id="bDl">Download JSON file</button>
+  <button id="bExport">Copy JSON</button><button class="danger" id="bReset">Reset</button>
+ </div>
+ <p class="note">Dashed dots = dead clicks (nothing happened). Dark red = rage bursts.</p>
+ <div id="log">Tracker ready.</div>
+ <textarea id="json" readonly placeholder="Exported JSON appears here"></textarea>
+</aside>
+<dialog id="dlg"><div class="di"><h2>Session summary</h2><p class="note" style="margin:0">Here's how this visit went.</p>
+ <div class="sg"><div class="stat"><b id="dCl">0</b><span>Clicks</span></div><div class="stat"><b id="dRage">0</b><span>Rage bursts</span></div><div class="stat"><b id="dDead">0</b><span>Dead clicks</span></div><div class="stat"><b id="dDepth">0%</b><span>Scroll depth</span></div><div class="stat"><b id="dTtc">—</b><span>1st click</span></div><div class="stat"><b id="dTime">0s</b><span>Time</span></div></div>
+ <div class="verdict" id="dV"></div>
+ <h3 style="margin:16px 0 0">Most-clicked elements</h3><div class="tw"><table><thead><tr><th>Element</th><th>Clicks</th><th>Issues</th></tr></thead><tbody id="dRows"></tbody></table></div>
+ <div class="da"><button id="dCopy">Copy JSON</button><button id="dDl">Download JSON</button><button class="primary" id="dClose">Close</button></div></div></dialog>
+<div id="layer" aria-hidden="true"><canvas id="cv" style="position:absolute;left:0;top:0"></canvas></div>
+<main>
+ <header><h1>Blush Usability Tracker</h1><p>Click, scroll and roam around this page. The tracker spots rage clicks, dead clicks and slow starts, then scores the friction.</p></header>
+ <nav><button data-go="top">Home</button><button data-go="shop">Shop</button><button data-go="deals">Deals</button><button data-go="club">Join the club</button></nav>
+ <section class="block"><h2>Welcome to Petal &amp; Co.</h2><p>A tiny pretend boutique to test on. Browse, add things to your bag, then hammer on the plain text below to trigger a rage click.</p><button>Browse new arrivals</button> <button>Gift guide</button><p class="dead">This paragraph isn't clickable. Click it repeatedly and see what happens.</p></section>
+ <div class="cards" id="shop">
+  <article class="card"><h3>🕯️ Rose Quartz Candle</h3><p>Soy wax, 40-hour burn · $24</p><button>Add to bag</button></article>
+  <article class="card"><h3>👜 Blush Canvas Tote</h3><p>Everyday carry-all · $38</p><button>Add to bag</button></article>
+  <article class="card"><h3>🎀 Pearl Hair Clips</h3><p>Set of six · $16</p><button>Add to bag</button></article>
+ </div>
+ <section class="block"><h2>Visibility test</h2><p>Scroll until the sale banner enters and leaves view.</p><div id="target" class="target">✨ Weekend sale: 20% off with code BLUSH20 ✨</div></section>
+ <section class="block tall"><h2 id="deals">Deals of the week</h2><p>Bundle three items and save. Page and viewport coordinates are both stored so visuals stay aligned on long pages.</p><button>See all deals</button> <button>Save to wishlist</button></section>
+ <section class="block tall"><h2>Your bag</h2><p>Nothing here yet. A tall section to test scroll depth and checkout hesitation.</p><button>Checkout</button> <button>Keep shopping</button></section>
+ <section class="block tall" id="club"><h2>Join the Petal club</h2><p>Get early access to drops and 10% off your first order. You reached the bottom, so scroll back up when done.</p><button>Sign me up</button></section>
+</main>
+<script>
+(()=>{
+const $=i=>document.getElementById(i),layer=$('layer'),cv=$('cv'),ctx=cv.getContext('2d');
+const S={on:true,t0:Date.now(),id:'s_'+Math.random().toString(36).slice(2,9),ev:[],clicks:[],moves:[],scrolls:[],rage:0,dead:0,depth:0,ttc:null,vis:'dots',path:false,lastM:0,lastS:0,recent:[]};
+const iso=()=>new Date().toISOString(),el=()=>Math.floor((Date.now()-S.t0)/1000),ft=s=>s<60?s+'s':Math.floor(s/60)+'m '+s%60+'s';
+const lab=e=>{let s=e.tagName.toLowerCase();if(e.id)s+='#'+e.id;const t=(e.innerText||'').trim().replace(/\s+/g,' ');return t?s+' "'+t.slice(0,24)+'"':s};
+function log(m){const d=document.createElement('div');d.textContent=m;$('log').prepend(d);while($('log').children.length>60)$('log').lastChild.remove()}
+function rec(type,data={}){if(!S.on)return;S.ev.push({sessionId:S.id,eventType:type,timestamp:iso(),offsetMs:Date.now()-S.t0,...data});if(S.ev.length>20000)S.ev.shift();if(type!=='mousemove')log(type+(data.label?' · '+data.label:''));upd()}
+function score(){return Math.max(0,100-S.rage*12-S.dead*4)}
+function upd(){$('sEv').textContent=S.ev.length;$('sCl').textContent=S.clicks.length;$('sRage').textContent=S.rage;$('sDead').textContent=S.dead;$('sTtc').textContent=S.ttc==null?'—':(S.ttc/1000).toFixed(1)+'s';$('sTime').textContent=ft(el());const f=score();$('sFr').textContent=f;$('fBar').style.width=f+'%';$('sDepth').textContent=S.depth+'%';$('dBar').style.width=S.depth+'%'}
+function size(){const d=document.documentElement,w=Math.max(d.scrollWidth,document.body.scrollWidth),h=Math.max(d.scrollHeight,document.body.scrollHeight);layer.style.width=w+'px';layer.style.height=h+'px';cv.width=w;cv.height=h;path()}
+function add(c,x,y,t,x2){const d=document.createElement('div');d.className=c+(x2?' '+x2:'');d.style.left=x+'px';d.style.top=y+'px';if(t!==undefined)d.textContent=t;layer.appendChild(d)}
+function render(m=S.vis){layer.querySelectorAll('div').forEach(n=>n.remove());S.vis=m;
+ if(m==='dots')S.clicks.forEach(c=>add('dot',c.pageX,c.pageY,c.n,c.rage?'rage':c.dead?'deadc':''));
+ if(m==='heat')S.clicks.forEach(c=>add('heat',c.pageX,c.pageY));
+ if(m==='scatter')S.clicks.forEach(c=>add('sc',c.pageX,c.pageY));
+ if(m==='mouse')S.moves.forEach(p=>add('mp',p.pageX,p.pageY));
+ document.querySelectorAll('[data-v]').forEach(b=>b.classList.toggle('on',b.dataset.v===m));path()}
+function path(){ctx.clearRect(0,0,cv.width,cv.height);if(!S.path||S.moves.length<2)return;ctx.strokeStyle='rgba(219,39,119,.7)';ctx.lineWidth=2.5;ctx.lineJoin='round';ctx.beginPath();S.moves.forEach((p,i)=>i?ctx.lineTo(p.pageX,p.pageY):ctx.moveTo(p.pageX,p.pageY));ctx.stroke();
+ [[S.moves[0],'Start','#f472b6'],[S.moves[S.moves.length-1],'End','#9d174d']].forEach(([p,t,c])=>{ctx.beginPath();ctx.arc(p.pageX,p.pageY,7,0,7);ctx.fillStyle=c;ctx.fill();ctx.lineWidth=3;ctx.strokeStyle='#fff';ctx.stroke();ctx.font='bold 12px sans-serif';ctx.fillStyle=c;ctx.fillText(t,p.pageX+11,p.pageY-9)})}
+const inP=e=>!!e.target.closest('#panel,dialog');
+document.addEventListener('click',e=>{if(inP(e)||!S.on)return;const t=e.target,now=Date.now();
+ const dead=!t.closest('a,button,input,select,textarea,label,[role=button]');
+ S.recent=S.recent.filter(r=>now-r.t<800);const near=S.recent.filter(r=>Math.hypot(r.x-e.pageX,r.y-e.pageY)<40);S.recent.push({t:now,x:e.pageX,y:e.pageY});
+ const rage=near.length>=2;if(rage&&near.length===2){S.rage++;S.clicks.slice(-2).forEach(c=>c.rage=true)}
+ if(S.ttc==null)S.ttc=now-S.t0;if(dead)S.dead++;
+ const c={n:S.clicks.length+1,pageX:e.pageX,pageY:e.pageY,clientX:e.clientX,clientY:e.clientY,label:lab(t),dead,rage,time:iso()};S.clicks.push(c);
+ rec('click',{...c});if(rage&&near.length===2)log('⚠ rage click burst');if(S.vis!=='none'&&S.vis!=='mouse')render()},true);
+document.addEventListener('mousemove',e=>{if(inP(e)||!S.on)return;const n=performance.now();if(n-S.lastM<60||S.moves.length>5000)return;S.lastM=n;S.moves.push({pageX:e.pageX,pageY:e.pageY,time:iso()});if(S.vis==='mouse')add('mp',e.pageX,e.pageY);if(S.path)path();upd()});
+addEventListener('scroll',()=>{if(!S.on)return;const d=document.documentElement,dep=Math.min(100,Math.round((scrollY+innerHeight)/Math.max(1,d.scrollHeight)*100));S.depth=Math.max(S.depth,dep);const n=performance.now();if(n-S.lastS>200){S.lastS=n;S.scrolls.push({scrollY,depth:dep,time:iso()});rec('scroll',{scrollY,depth:dep})}upd()},{passive:true});
+document.addEventListener('visibilitychange',()=>rec('page_visibility',{state:document.visibilityState}));
+if('IntersectionObserver'in window)new IntersectionObserver(es=>es.forEach(x=>rec('element_visibility',{label:'target '+(x.isIntersecting?'visible':'hidden'),ratio:+x.intersectionRatio.toFixed(2)})),{threshold:[0,.5,1]}).observe($('target'));
+addEventListener('resize',size);addEventListener('load',size);if('ResizeObserver'in window)new ResizeObserver(size).observe(document.body);setInterval(upd,1000);
+function data(){return{sessionId:S.id,startedAt:new Date(S.t0).toISOString(),exportedAt:iso(),summary:{events:S.ev.length,clicks:S.clicks.length,rageBursts:S.rage,deadClicks:S.dead,timeToFirstClickMs:S.ttc,frictionFreeScore:score(),maxScrollDepth:S.depth,seconds:el()},clicks:S.clicks,mouse:S.moves,scrolls:S.scrolls,events:S.ev}}
+function summary(){const f=score(),t=el();$('dCl').textContent=S.clicks.length;$('dRage').textContent=S.rage;$('dDead').textContent=S.dead;$('dDepth').textContent=S.depth+'%';$('dTtc').textContent=S.ttc==null?'—':(S.ttc/1000).toFixed(1)+'s';$('dTime').textContent=ft(t);
+ const v=$('dV');v.replaceChildren();v.append('Friction-free score: '+f+'/100 · '+(f>=85?'Smooth experience':f>=60?'Some friction':'High friction'));const sm=document.createElement('small');sm.textContent=S.clicks.length?(S.rage?S.rage+' rage burst(s) suggest something felt broken or slow. ':'')+(S.dead?S.dead+' dead click(s) hit things that looked clickable but weren\'t.':(S.rage?'':'No obvious trouble spots.')):'No clicks recorded yet.';v.append(sm);
+ const m={};S.clicks.forEach(c=>{const o=m[c.label]||(m[c.label]={n:0,d:0,r:0});o.n++;if(c.dead)o.d++;if(c.rage)o.r++});const rows=Object.entries(m).sort((a,b)=>b[1].n-a[1].n).slice(0,8),tb=$('dRows');tb.replaceChildren();
+ if(!rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=3;td.textContent='No clicks yet';tr.append(td);tb.append(tr)}
+ else rows.forEach(([k,o])=>{const tr=document.createElement('tr');[k,o.n,[o.d?o.d+' dead':'',o.r?o.r+' rage':''].filter(Boolean).join(', ')||'—'].forEach(x=>{const td=document.createElement('td');td.textContent=x;tr.append(td)});tb.append(tr)});
+ $('dlg').showModal()}
+function plain(j,name){try{const u=URL.createObjectURL(new Blob([j],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2000);log('Download started: '+name)}catch(_){log('Download blocked — use Copy JSON')}try{navigator.clipboard.writeText(j)}catch(_){}}
+async function dl(){const j=JSON.stringify(data(),null,2),name='usability-results-'+S.id+'.json';$('json').value=j;let d=null;try{d=await claude.use('downloads')}catch(_){}
+ if(!d){plain(j,name);return}
+ try{await d.save({filename:name,data:j});log('Results file saved')}catch(e){if(e&&e.code==='declined')log('Download cancelled');else plain(j,name)}}
+$('bDl').onclick=dl;$('dDl').onclick=dl;
+$('bSum').onclick=summary;$('dClose').onclick=()=>$('dlg').close();$('dCopy').onclick=()=>{$('bExport').click();$('dCopy').textContent='Copied ✓'};
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>render(b.dataset.v));
+$('bPath').onclick=()=>{S.path=!S.path;$('bPath').classList.toggle('on',S.path);path()};
+$('bToggle').onclick=()=>{if(S.on){rec('tracking_paused');S.on=false}else{S.on=true;rec('tracking_resumed')}$('status').textContent=S.on?'Live':'Paused';$('status').classList.toggle('off',!S.on);$('bToggle').textContent=S.on?'Pause tracking':'Resume tracking'};
+$('bUndo').onclick=()=>{const c=S.clicks.pop();if(!c)return;if(c.dead)S.dead--;S.ev=S.ev.filter(e=>!(e.eventType==='click'&&e.n===c.n));render();upd();log('undo click')};
+$('bNum').onclick=()=>{const h=document.body.classList.toggle('hide-n');$('bNum').textContent='Numbers: '+(h?'off':'on')};
+$('bExport').onclick=async()=>{const j=JSON.stringify(data(),null,2),t=$('json');t.value=j;t.select();try{await navigator.clipboard.writeText(j);log('JSON copied')}catch(_){log('JSON ready — copy from box')}};
+$('bReset').onclick=()=>{if(!confirm('Reset all tracking data?'))return;Object.assign(S,{t0:Date.now(),id:'s_'+Math.random().toString(36).slice(2,9),ev:[],clicks:[],moves:[],scrolls:[],rage:0,dead:0,depth:0,ttc:null,path:false,recent:[]});$('log').textContent='Data reset.';$('json').value='';render('dots');upd()};
+$('bMin').onclick=()=>{const m=$('panel').classList.toggle('min');$('bMin').textContent=m?'+':'−'};
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{const w=b.dataset.go;w==='top'?scrollTo({top:0,behavior:'smooth'}):$(w).scrollIntoView({behavior:'smooth'})});
+size();upd();rec('tracker_initialized');
+})();
+</script>
+</body>
+</html>

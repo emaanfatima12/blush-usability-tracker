@@ -1,0 +1,926 @@
+{
+  "sessionId": "s_gp268yn",
+  "startedAt": "2026-10-01T18:14:30.275Z",
+  "exportedAt": "2026-10-01T18:15:09.101Z",
+  "summary": {
+    "events": 24,
+    "clicks": 6,
+    "rageBursts": 0,
+    "deadClicks": 0,
+    "timeToFirstClickMs": 8646,
+    "frictionFreeScore": 100,
+    "maxScrollDepth": 100,
+    "seconds": 38
+  },
+  "clicks": [
+    {
+      "n": 1,
+      "pageX": 266,
+      "pageY": 453,
+      "clientX": 266,
+      "clientY": 279,
+      "label": "button \"Browse new arrivals\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:38.921Z"
+    },
+    {
+      "n": 2,
+      "pageX": 229,
+      "pageY": 683,
+      "clientX": 229,
+      "clientY": 510,
+      "label": "button \"Add to bag\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:40.253Z"
+    },
+    {
+      "n": 3,
+      "pageX": 787,
+      "pageY": 674,
+      "clientX": 787,
+      "clientY": 500,
+      "label": "button \"Add to bag\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:41.569Z"
+    },
+    {
+      "n": 4,
+      "pageX": 246,
+      "pageY": 1236,
+      "clientX": 246,
+      "clientY": 322,
+      "label": "button \"See all deals\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:46.302Z"
+    },
+    {
+      "n": 5,
+      "pageX": 209,
+      "pageY": 1578,
+      "clientX": 209,
+      "clientY": 663,
+      "label": "button \"Checkout\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:47.739Z"
+    },
+    {
+      "n": 6,
+      "pageX": 241,
+      "pageY": 1935,
+      "clientX": 241,
+      "clientY": 486,
+      "label": "button \"Sign me up\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:52.219Z"
+    }
+  ],
+  "mouse": [
+    {
+      "pageX": 810,
+      "pageY": 595,
+      "time": "2026-10-01T18:14:30.279Z"
+    },
+    {
+      "pageX": 823,
+      "pageY": 603,
+      "time": "2026-10-01T18:14:30.900Z"
+    },
+    {
+      "pageX": 1047,
+      "pageY": 731,
+      "time": "2026-10-01T18:14:30.973Z"
+    },
+    {
+      "pageX": 1461,
+      "pageY": 876,
+      "time": "2026-10-01T18:14:31.539Z"
+    },
+    {
+      "pageX": 1472,
+      "pageY": 881,
+      "time": "2026-10-01T18:14:31.606Z"
+    },
+    {
+      "pageX": 1473,
+      "pageY": 881,
+      "time": "2026-10-01T18:14:31.674Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 886,
+      "time": "2026-10-01T18:14:31.821Z"
+    },
+    {
+      "pageX": 1469,
+      "pageY": 888,
+      "time": "2026-10-01T18:14:31.891Z"
+    },
+    {
+      "pageX": 1459,
+      "pageY": 889,
+      "time": "2026-10-01T18:14:31.956Z"
+    },
+    {
+      "pageX": 1454,
+      "pageY": 890,
+      "time": "2026-10-01T18:14:32.023Z"
+    },
+    {
+      "pageX": 1053,
+      "pageY": 762,
+      "time": "2026-10-01T18:14:33.839Z"
+    },
+    {
+      "pageX": 629,
+      "pageY": 863,
+      "time": "2026-10-01T18:14:33.906Z"
+    },
+    {
+      "pageX": 590,
+      "pageY": 870,
+      "time": "2026-10-01T18:14:33.973Z"
+    },
+    {
+      "pageX": 595,
+      "pageY": 867,
+      "time": "2026-10-01T18:14:34.039Z"
+    },
+    {
+      "pageX": 612,
+      "pageY": 867,
+      "time": "2026-10-01T18:14:34.107Z"
+    },
+    {
+      "pageX": 688,
+      "pageY": 899,
+      "time": "2026-10-01T18:14:34.173Z"
+    },
+    {
+      "pageX": 809,
+      "pageY": 951,
+      "time": "2026-10-01T18:14:34.239Z"
+    },
+    {
+      "pageX": 965,
+      "pageY": 959,
+      "time": "2026-10-01T18:14:34.306Z"
+    },
+    {
+      "pageX": 1058,
+      "pageY": 907,
+      "time": "2026-10-01T18:14:34.806Z"
+    },
+    {
+      "pageX": 602,
+      "pageY": 831,
+      "time": "2026-10-01T18:14:34.873Z"
+    },
+    {
+      "pageX": 446,
+      "pageY": 808,
+      "time": "2026-10-01T18:14:34.939Z"
+    },
+    {
+      "pageX": 445,
+      "pageY": 808,
+      "time": "2026-10-01T18:14:35.328Z"
+    },
+    {
+      "pageX": 371,
+      "pageY": 791,
+      "time": "2026-10-01T18:14:35.389Z"
+    },
+    {
+      "pageX": 279,
+      "pageY": 747,
+      "time": "2026-10-01T18:14:35.456Z"
+    },
+    {
+      "pageX": 280,
+      "pageY": 741,
+      "time": "2026-10-01T18:14:35.522Z"
+    },
+    {
+      "pageX": 600,
+      "pageY": 685,
+      "time": "2026-10-01T18:14:35.589Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 688,
+      "time": "2026-10-01T18:14:35.705Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 694,
+      "time": "2026-10-01T18:14:36.188Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 254,
+      "time": "2026-10-01T18:14:37.506Z"
+    },
+    {
+      "pageX": 1077,
+      "pageY": 299,
+      "time": "2026-10-01T18:14:37.755Z"
+    },
+    {
+      "pageX": 567,
+      "pageY": 383,
+      "time": "2026-10-01T18:14:37.822Z"
+    },
+    {
+      "pageX": 512,
+      "pageY": 384,
+      "time": "2026-10-01T18:14:38.091Z"
+    },
+    {
+      "pageX": 397,
+      "pageY": 398,
+      "time": "2026-10-01T18:14:38.155Z"
+    },
+    {
+      "pageX": 307,
+      "pageY": 439,
+      "time": "2026-10-01T18:14:38.222Z"
+    },
+    {
+      "pageX": 269,
+      "pageY": 453,
+      "time": "2026-10-01T18:14:38.289Z"
+    },
+    {
+      "pageX": 266,
+      "pageY": 453,
+      "time": "2026-10-01T18:14:38.373Z"
+    },
+    {
+      "pageX": 265,
+      "pageY": 459,
+      "time": "2026-10-01T18:14:39.304Z"
+    },
+    {
+      "pageX": 252,
+      "pageY": 541,
+      "time": "2026-10-01T18:14:39.372Z"
+    },
+    {
+      "pageX": 240,
+      "pageY": 591,
+      "time": "2026-10-01T18:14:39.439Z"
+    },
+    {
+      "pageX": 230,
+      "pageY": 628,
+      "time": "2026-10-01T18:14:39.505Z"
+    },
+    {
+      "pageX": 228,
+      "pageY": 663,
+      "time": "2026-10-01T18:14:39.573Z"
+    },
+    {
+      "pageX": 228,
+      "pageY": 674,
+      "time": "2026-10-01T18:14:39.639Z"
+    },
+    {
+      "pageX": 229,
+      "pageY": 680,
+      "time": "2026-10-01T18:14:39.705Z"
+    },
+    {
+      "pageX": 229,
+      "pageY": 683,
+      "time": "2026-10-01T18:14:39.789Z"
+    },
+    {
+      "pageX": 235,
+      "pageY": 686,
+      "time": "2026-10-01T18:14:40.464Z"
+    },
+    {
+      "pageX": 385,
+      "pageY": 709,
+      "time": "2026-10-01T18:14:40.539Z"
+    },
+    {
+      "pageX": 556,
+      "pageY": 707,
+      "time": "2026-10-01T18:14:40.605Z"
+    },
+    {
+      "pageX": 669,
+      "pageY": 701,
+      "time": "2026-10-01T18:14:40.672Z"
+    },
+    {
+      "pageX": 709,
+      "pageY": 701,
+      "time": "2026-10-01T18:14:40.739Z"
+    },
+    {
+      "pageX": 717,
+      "pageY": 699,
+      "time": "2026-10-01T18:14:40.805Z"
+    },
+    {
+      "pageX": 733,
+      "pageY": 694,
+      "time": "2026-10-01T18:14:40.873Z"
+    },
+    {
+      "pageX": 744,
+      "pageY": 686,
+      "time": "2026-10-01T18:14:40.939Z"
+    },
+    {
+      "pageX": 761,
+      "pageY": 681,
+      "time": "2026-10-01T18:14:41.005Z"
+    },
+    {
+      "pageX": 781,
+      "pageY": 675,
+      "time": "2026-10-01T18:14:41.072Z"
+    },
+    {
+      "pageX": 787,
+      "pageY": 674,
+      "time": "2026-10-01T18:14:41.138Z"
+    },
+    {
+      "pageX": 793,
+      "pageY": 674,
+      "time": "2026-10-01T18:14:41.990Z"
+    },
+    {
+      "pageX": 976,
+      "pageY": 641,
+      "time": "2026-10-01T18:14:42.056Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 519,
+      "time": "2026-10-01T18:14:42.172Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 499,
+      "time": "2026-10-01T18:14:42.238Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 491,
+      "time": "2026-10-01T18:14:42.310Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 491,
+      "time": "2026-10-01T18:14:42.383Z"
+    },
+    {
+      "pageX": 1470,
+      "pageY": 469,
+      "time": "2026-10-01T18:14:42.455Z"
+    },
+    {
+      "pageX": 1470,
+      "pageY": 453,
+      "time": "2026-10-01T18:14:42.522Z"
+    },
+    {
+      "pageX": 1472,
+      "pageY": 449,
+      "time": "2026-10-01T18:14:42.605Z"
+    },
+    {
+      "pageX": 1464,
+      "pageY": 1434,
+      "time": "2026-10-01T18:14:44.688Z"
+    },
+    {
+      "pageX": 961,
+      "pageY": 1471,
+      "time": "2026-10-01T18:14:44.955Z"
+    },
+    {
+      "pageX": 506,
+      "pageY": 1422,
+      "time": "2026-10-01T18:14:45.021Z"
+    },
+    {
+      "pageX": 461,
+      "pageY": 1405,
+      "time": "2026-10-01T18:14:45.291Z"
+    },
+    {
+      "pageX": 333,
+      "pageY": 1331,
+      "time": "2026-10-01T18:14:45.355Z"
+    },
+    {
+      "pageX": 277,
+      "pageY": 1275,
+      "time": "2026-10-01T18:14:45.421Z"
+    },
+    {
+      "pageX": 272,
+      "pageY": 1265,
+      "time": "2026-10-01T18:14:45.488Z"
+    },
+    {
+      "pageX": 271,
+      "pageY": 1262,
+      "time": "2026-10-01T18:14:45.555Z"
+    },
+    {
+      "pageX": 268,
+      "pageY": 1258,
+      "time": "2026-10-01T18:14:45.621Z"
+    },
+    {
+      "pageX": 266,
+      "pageY": 1256,
+      "time": "2026-10-01T18:14:45.701Z"
+    },
+    {
+      "pageX": 258,
+      "pageY": 1246,
+      "time": "2026-10-01T18:14:45.771Z"
+    },
+    {
+      "pageX": 247,
+      "pageY": 1238,
+      "time": "2026-10-01T18:14:45.838Z"
+    },
+    {
+      "pageX": 245,
+      "pageY": 1247,
+      "time": "2026-10-01T18:14:46.573Z"
+    },
+    {
+      "pageX": 228,
+      "pageY": 1365,
+      "time": "2026-10-01T18:14:46.638Z"
+    },
+    {
+      "pageX": 218,
+      "pageY": 1449,
+      "time": "2026-10-01T18:14:46.704Z"
+    },
+    {
+      "pageX": 201,
+      "pageY": 1491,
+      "time": "2026-10-01T18:14:46.771Z"
+    },
+    {
+      "pageX": 189,
+      "pageY": 1514,
+      "time": "2026-10-01T18:14:46.838Z"
+    },
+    {
+      "pageX": 187,
+      "pageY": 1531,
+      "time": "2026-10-01T18:14:46.905Z"
+    },
+    {
+      "pageX": 187,
+      "pageY": 1535,
+      "time": "2026-10-01T18:14:46.971Z"
+    },
+    {
+      "pageX": 189,
+      "pageY": 1539,
+      "time": "2026-10-01T18:14:47.038Z"
+    },
+    {
+      "pageX": 202,
+      "pageY": 1564,
+      "time": "2026-10-01T18:14:47.105Z"
+    },
+    {
+      "pageX": 207,
+      "pageY": 1578,
+      "time": "2026-10-01T18:14:47.171Z"
+    },
+    {
+      "pageX": 222,
+      "pageY": 1578,
+      "time": "2026-10-01T18:14:48.089Z"
+    },
+    {
+      "pageX": 567,
+      "pageY": 1496,
+      "time": "2026-10-01T18:14:48.154Z"
+    },
+    {
+      "pageX": 1456,
+      "pageY": 1312,
+      "time": "2026-10-01T18:14:48.771Z"
+    },
+    {
+      "pageX": 1463,
+      "pageY": 1312,
+      "time": "2026-10-01T18:14:48.838Z"
+    },
+    {
+      "pageX": 1466,
+      "pageY": 1312,
+      "time": "2026-10-01T18:14:48.917Z"
+    },
+    {
+      "pageX": 1470,
+      "pageY": 1311,
+      "time": "2026-10-01T18:14:49.021Z"
+    },
+    {
+      "pageX": 1472,
+      "pageY": 1311,
+      "time": "2026-10-01T18:14:49.088Z"
+    },
+    {
+      "pageX": 1474,
+      "pageY": 1311,
+      "time": "2026-10-01T18:14:49.155Z"
+    },
+    {
+      "pageX": 1479,
+      "pageY": 1310,
+      "time": "2026-10-01T18:14:49.238Z"
+    },
+    {
+      "pageX": 1023,
+      "pageY": 2127,
+      "time": "2026-10-01T18:14:51.005Z"
+    },
+    {
+      "pageX": 528,
+      "pageY": 2049,
+      "time": "2026-10-01T18:14:51.071Z"
+    },
+    {
+      "pageX": 513,
+      "pageY": 2044,
+      "time": "2026-10-01T18:14:51.339Z"
+    },
+    {
+      "pageX": 370,
+      "pageY": 1983,
+      "time": "2026-10-01T18:14:51.405Z"
+    },
+    {
+      "pageX": 273,
+      "pageY": 1935,
+      "time": "2026-10-01T18:14:51.471Z"
+    },
+    {
+      "pageX": 258,
+      "pageY": 1929,
+      "time": "2026-10-01T18:14:51.538Z"
+    },
+    {
+      "pageX": 255,
+      "pageY": 1928,
+      "time": "2026-10-01T18:14:51.654Z"
+    },
+    {
+      "pageX": 243,
+      "pageY": 1934,
+      "time": "2026-10-01T18:14:51.721Z"
+    },
+    {
+      "pageX": 251,
+      "pageY": 1936,
+      "time": "2026-10-01T18:14:52.879Z"
+    },
+    {
+      "pageX": 515,
+      "pageY": 1959,
+      "time": "2026-10-01T18:14:52.954Z"
+    },
+    {
+      "pageX": 892,
+      "pageY": 1969,
+      "time": "2026-10-01T18:14:53.021Z"
+    },
+    {
+      "pageX": 1049,
+      "pageY": 1999,
+      "time": "2026-10-01T18:14:53.087Z"
+    },
+    {
+      "pageX": 1077,
+      "pageY": 2007,
+      "time": "2026-10-01T18:14:55.453Z"
+    },
+    {
+      "pageX": 1455,
+      "pageY": 2116,
+      "time": "2026-10-01T18:14:55.570Z"
+    },
+    {
+      "pageX": 1480,
+      "pageY": 2139,
+      "time": "2026-10-01T18:14:55.782Z"
+    },
+    {
+      "pageX": 1469,
+      "pageY": 2106,
+      "time": "2026-10-01T18:14:55.854Z"
+    }
+  ],
+  "scrolls": [
+    {
+      "scrollY": 491.20001220703125,
+      "depth": 57,
+      "time": "2026-10-01T18:14:36.689Z"
+    },
+    {
+      "scrollY": 173.60000610351562,
+      "depth": 42,
+      "time": "2026-10-01T18:14:36.906Z"
+    },
+    {
+      "scrollY": 176.8000030517578,
+      "depth": 43,
+      "time": "2026-10-01T18:14:43.722Z"
+    },
+    {
+      "scrollY": 360.79998779296875,
+      "depth": 51,
+      "time": "2026-10-01T18:14:43.922Z"
+    },
+    {
+      "scrollY": 652,
+      "depth": 64,
+      "time": "2026-10-01T18:14:44.122Z"
+    },
+    {
+      "scrollY": 902.4000244140625,
+      "depth": 75,
+      "time": "2026-10-01T18:14:44.338Z"
+    },
+    {
+      "scrollY": 914.4000244140625,
+      "depth": 76,
+      "time": "2026-10-01T18:14:44.539Z"
+    },
+    {
+      "scrollY": 917.5999755859375,
+      "depth": 76,
+      "time": "2026-10-01T18:14:49.824Z"
+    },
+    {
+      "scrollY": 1080,
+      "depth": 83,
+      "time": "2026-10-01T18:14:50.038Z"
+    },
+    {
+      "scrollY": 1308,
+      "depth": 94,
+      "time": "2026-10-01T18:14:50.239Z"
+    }
+  ],
+  "events": [
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:36.689Z",
+      "offsetMs": 6414,
+      "scrollY": 491.20001220703125,
+      "depth": 57
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "element_visibility",
+      "timestamp": "2026-10-01T18:14:36.790Z",
+      "offsetMs": 6515,
+      "label": "target visible",
+      "ratio": 0.77
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "element_visibility",
+      "timestamp": "2026-10-01T18:14:36.841Z",
+      "offsetMs": 6566,
+      "label": "target visible",
+      "ratio": 0.48
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:36.906Z",
+      "offsetMs": 6631,
+      "scrollY": 173.60000610351562,
+      "depth": 42
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "click",
+      "timestamp": "2026-10-01T18:14:38.921Z",
+      "offsetMs": 8646,
+      "n": 1,
+      "pageX": 266,
+      "pageY": 453,
+      "clientX": 266,
+      "clientY": 279,
+      "label": "button \"Browse new arrivals\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:38.921Z"
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "click",
+      "timestamp": "2026-10-01T18:14:40.253Z",
+      "offsetMs": 9978,
+      "n": 2,
+      "pageX": 229,
+      "pageY": 683,
+      "clientX": 229,
+      "clientY": 510,
+      "label": "button \"Add to bag\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:40.253Z"
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "click",
+      "timestamp": "2026-10-01T18:14:41.569Z",
+      "offsetMs": 11294,
+      "n": 3,
+      "pageX": 787,
+      "pageY": 674,
+      "clientX": 787,
+      "clientY": 500,
+      "label": "button \"Add to bag\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:41.569Z"
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:43.722Z",
+      "offsetMs": 13447,
+      "scrollY": 176.8000030517578,
+      "depth": 43
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "element_visibility",
+      "timestamp": "2026-10-01T18:14:43.741Z",
+      "offsetMs": 13466,
+      "label": "target visible",
+      "ratio": 0.53
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "element_visibility",
+      "timestamp": "2026-10-01T18:14:43.857Z",
+      "offsetMs": 13582,
+      "label": "target visible",
+      "ratio": 1
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:43.922Z",
+      "offsetMs": 13647,
+      "scrollY": 360.79998779296875,
+      "depth": 51
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:44.122Z",
+      "offsetMs": 13847,
+      "scrollY": 652,
+      "depth": 64
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "element_visibility",
+      "timestamp": "2026-10-01T18:14:44.290Z",
+      "offsetMs": 14015,
+      "label": "target visible",
+      "ratio": 0.99
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:44.338Z",
+      "offsetMs": 14063,
+      "scrollY": 902.4000244140625,
+      "depth": 75
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:44.539Z",
+      "offsetMs": 14264,
+      "scrollY": 914.4000244140625,
+      "depth": 76
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "click",
+      "timestamp": "2026-10-01T18:14:46.302Z",
+      "offsetMs": 16027,
+      "n": 4,
+      "pageX": 246,
+      "pageY": 1236,
+      "clientX": 246,
+      "clientY": 322,
+      "label": "button \"See all deals\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:46.302Z"
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "click",
+      "timestamp": "2026-10-01T18:14:47.739Z",
+      "offsetMs": 17464,
+      "n": 5,
+      "pageX": 209,
+      "pageY": 1578,
+      "clientX": 209,
+      "clientY": 663,
+      "label": "button \"Checkout\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:47.739Z"
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:49.824Z",
+      "offsetMs": 19549,
+      "scrollY": 917.5999755859375,
+      "depth": 76
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "element_visibility",
+      "timestamp": "2026-10-01T18:14:49.872Z",
+      "offsetMs": 19597,
+      "label": "target visible",
+      "ratio": 0.5
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "element_visibility",
+      "timestamp": "2026-10-01T18:14:49.990Z",
+      "offsetMs": 19715,
+      "label": "target hidden",
+      "ratio": 0
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:50.038Z",
+      "offsetMs": 19763,
+      "scrollY": 1080,
+      "depth": 83
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "scroll",
+      "timestamp": "2026-10-01T18:14:50.239Z",
+      "offsetMs": 19964,
+      "scrollY": 1308,
+      "depth": 94
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "click",
+      "timestamp": "2026-10-01T18:14:52.219Z",
+      "offsetMs": 21944,
+      "n": 6,
+      "pageX": 241,
+      "pageY": 1935,
+      "clientX": 241,
+      "clientY": 486,
+      "label": "button \"Sign me up\"",
+      "dead": false,
+      "rage": false,
+      "time": "2026-10-01T18:14:52.219Z"
+    },
+    {
+      "sessionId": "s_gp268yn",
+      "eventType": "tracking_paused",
+      "timestamp": "2026-10-01T18:14:57.920Z",
+      "offsetMs": 27645
+    }
+  ]
+}
